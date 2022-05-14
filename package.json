@@ -1,0 +1,22 @@
+{
+  "name": "beatsify",
+  "version": "1.0.0",
+  "description": "Web-based Spotify clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoftVibes/beatsify.git"
+  },
+  "author": "SoftVibes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SoftVibes/beatsify/issues"
+  },
+  "homepage": "https://github.com/SoftVibes/beatsify#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
