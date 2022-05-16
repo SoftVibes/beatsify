@@ -4,7 +4,7 @@
   "description": "Web-based Spotify clone",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SoftVibes/beatsify#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1"
   }
 }

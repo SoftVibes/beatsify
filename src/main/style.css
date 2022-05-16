@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+}
+
+#container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+#list {
+    position: fixed;
+    width: 20vw;
+    height: 85vh;
+    background-color: rgb(0, 0, 0);
+}
+
+#content {
+    position: fixed;
+    width: 80vw;
+    height: 85vh;
+    margin-left: 20vw;
+    background-color: rgb(20, 20, 20);
+}
+
+#track {
+    position: fixed;
+    width: 100vw;
+    height: 15vh;
+    margin-top: 85vh;
+    background-color: rgb(30, 30, 30);
+}
+
+#icon {
+    width: 30%;
+    height: 30%;
+    margin-left: calc((20vw - 30%)/2);
+    margin-top: -5%;
+}
