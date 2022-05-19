@@ -60,14 +60,15 @@ body {
     color: rgb(255, 255, 255);
     display: flex;
     flex-wrap: wrap;
+    padding-left: 1%;
 }
 
 #track-img {
     width: 8vh;
     height: 8vh;
     margin-top: 3.5vh;
-    margin-left: 3.5vh;
-    margin-right: 3.5vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
 }
 
 #track-data {
@@ -101,51 +102,94 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-top: .75%;
+    margin-left: 5%;
 }
 
 #current-time {
     font-family: monospace;
     font-size: 105%;
-    margin-left: 17.5%;
-    margin-right: 5%;
+    margin: 0 3% 0 21%;
 }
 
 #button-track-previous {
     background-color: rgb(30, 30, 30);
-    border: 1px solid rgb(30, 30, 30);
+    border: none;
     cursor: pointer;
+    margin:  0 3% 0 0;
+}
+
+#img-button-track-previous {
+    width: 115%;
+    height: 115%;
 }
 
 #button-track-play-pause {
-    width: 6.5vh;
-    height: 6.5vh;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(30, 30, 30);
     border-radius: 50%;
+    width: 6vh;
+    height: 6vh;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #button-track-next {
     background-color: rgb(30, 30, 30);
-    border: 1px solid rgb(30, 30, 30);
+    border: none;
     cursor: pointer;
+    margin:  0 0 0 3%;
+}
+
+#img-button-track-next {
+    width: 115%;
+    height: 115%;
 }
 
 #track-time {
     font-family: monospace;
     font-size: 105%;
-    margin-left: 5%;
-    margin-right: 17.5%;
+    margin: 0 21% 0 3%;
 }
 
 #track-control {
+    margin-top: -5%;
+    -webkit-appearance: none;
+    width: 75%;
+    height: 5px;
+    background-color: rgb(70, 70, 70);
+    outline: none;
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: .5rem;
+}
+
+#track-control::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(241, 108, 67);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 #track-volume {
-    margin-left: 20%;
+    -webkit-appearance: none;
+    width: 10%;
+    height: 5px;
+    margin-left: 10%;
+    margin-top: calc((15vh - 5px) / 2);
+    background-color: rgb(70, 70, 70);
+    outline: none;
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: .5rem;
+}
+
+#track-volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(241, 108, 67);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 #content {
