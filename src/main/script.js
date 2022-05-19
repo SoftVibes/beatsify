@@ -1,5 +1,7 @@
+//Variables
 let listSelected = null;
 
+//Functions
 function listHover(item) {
     img = document.getElementById('list-button-img-' + item);
     img.src = `http://localhost:8080/resource/images/${item}_selected.svg`;
@@ -35,5 +37,17 @@ function listSelect(item) {
     button2.style.color = 'rgb(0, 0, 0)';
 }
 
+function loadTrack() {
+    var getData = new XMLHttpRequest();
+    getData.onreadystatechange = function () {
+        
+    }
+
+    getData.open('GET', 'http://localhost:8080/track');
+    getData.send();
+}
+
+//Startup
 listHover('home');
 listSelect('home');
+loadTrack();

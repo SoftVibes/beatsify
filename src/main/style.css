@@ -66,3 +66,16 @@ body {
 #list-button-img-home, #list-button-img-search {
     margin-left: 1%;
 }
+
+#button-track-next, #button-track-previous {
+    background-color: rgb(30, 30, 30);
+    border: none;
+    cursor: pointer;
+}
+
+#button-track-play-pause {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 50%;
+    cursor: pointer;
+}
