@@ -53,13 +53,22 @@ function playButtonHover(mode) {
 function loadTrack() {
     var getData = new XMLHttpRequest();
     getData.onreadystatechange = function () {
-        data = JSON.parse(this.responseText);
-        mins = Math.floor(data.length / 60);
-        secs = data.length % 60;
-        document.getElementById('track-img').src = data.img;
-        document.getElementById('track-name').innerHTML = data.name;
-        document.getElementById('track-artist').innerHTML = data.artist;
-        document.getElementById('track-time').innerHTML = `${mins}:${secs}`;
+        try {
+            data = JSON.parse(this.responseText);
+            length = data.length;
+            mins = Math.floor(length / 60).toString();
+            secs = (length % 60).toString();
+            if (secs.length == 1) {
+                secs = '0' + secs;
+            }
+            document.getElementById('track-img').src = data.img;
+            document.getElementById('track-name').innerHTML = data.name;
+            document.getElementById('track-artist').innerHTML = data.artist;
+            document.getElementById('track-time').innerHTML = `${mins}:${secs}`;
+            document.getElementById('track-control').max = `${length}`;
+        } catch(err) {
+            return;
+        }
     }
 
     getData.open('GET', 'http://localhost:8080/track');
@@ -77,7 +86,32 @@ function clickPlayPause() {
     }
 }
 
+function updateTrackTime(value) {
+    value = parseInt(value);
+    mins = Math.floor(value / 60).toString();
+    secs = (value % 60).toString();
+    if (secs.length == 1) {
+        secs = '0' + secs;
+    }
+    document.getElementById('current-time').innerHTML = `${mins}:${secs}`;
+}
+
+function updateVolume(value) {
+    value = parseInt(value);
+    src = '';
+    if (value == 0) {
+        src = 'http://localhost:8080/resource/images/volume_0.svg';
+    } else if (value < 35) {
+        src = 'http://localhost:8080/resource/images/volume_35.svg';
+    } else if (value < 70) {
+        src = 'http://localhost:8080/resource/images/volume_70.svg';
+    } else {
+        src = 'http://localhost:8080/resource/images/volume_100.svg';
+    }
+    document.getElementById('img-track-volume').src = src;
+}
+
 //Startup
 listHover('home');
 listSelect('home');
-//loadTrack();
+loadTrack();

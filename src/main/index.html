@@ -26,7 +26,7 @@
 
         </div>
         <div id="track">
-            <img id="track-img" src="http://localhost:8080/resource/images/none.svg">
+            <img id="track-img" src="">
             <div id="track-data">
                 <p id="track-name">Unknown</p>
                 <p id="track-artist">Unknown</p>
@@ -43,9 +43,10 @@
                     <img id="img-button-track-next" src="http://localhost:8080/resource/images/next.svg">
                 </button>
                 <p id="track-time">1:00</p>
-                <input id="track-control" type="range" min="0" max="100" value="0" step="1">
+                <input id="track-control" type="range" min="0" max="100" value="0" step="1" oninput="updateTrackTime(this.value);">
             </div>
-            <input id="track-volume" type="range" min="0" max="100" value="100" step="1">
+            <img id="img-track-volume" src="http://localhost:8080/resource/images/volume_100.svg">
+            <input id="track-volume" type="range" min="0" max="100" value="100" step="1" oninput="updateVolume(this.value);">
         </div>
     </div>
 </body>

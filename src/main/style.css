@@ -103,7 +103,7 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: .75%;
-    margin-left: 5%;
+    margin-left: 7%;
 }
 
 #current-time {
@@ -131,6 +131,9 @@ body {
     width: 6vh;
     height: 6vh;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #button-track-next {
@@ -175,7 +178,7 @@ body {
     -webkit-appearance: none;
     width: 10%;
     height: 5px;
-    margin-left: 10%;
+    margin-left: 1%;
     margin-top: calc((15vh - 5px) / 2);
     background-color: rgb(70, 70, 70);
     outline: none;
@@ -190,6 +193,13 @@ body {
     background-color: rgb(241, 108, 67);
     border-radius: 50%;
     cursor: pointer;
+}
+
+#img-track-volume {
+    width: 3vh;
+    height: 3vh;
+    margin-top: 6vh;
+    margin-left: 9%;
 }
 
 #content {
