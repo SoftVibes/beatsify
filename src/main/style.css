@@ -38,3 +38,31 @@ body {
     margin-left: calc((20vw - 30%)/2);
     margin-top: -5%;
 }
+
+.list-button {
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: .4rem;
+    color: rgb(255, 255, 255);
+    margin: 3% 6% 3% 6%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 13%;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: 800;
+    padding-left: 8%;
+}
+
+.list-button-img {
+    width: 15%;
+    height: 15%;
+}
+
+.list-button-p {
+    font-size: 105%;
+}
+
+#list-button-img-home, #list-button-img-search {
+    margin-left: 1%;
+}

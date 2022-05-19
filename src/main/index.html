@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="http://localhost:8080/css/main">
-    <link rel="icon" href="http://localhost:8080/img/icon">
+    <link rel="stylesheet" href="http://localhost:8080/resource/main/style.css">
+    <link rel="icon" href="http://localhost:8080/resource/images/icon.svg">
     <title>Beatsify</title>
 </head>
 <body>
     <div id="container">
         <div id="list">
-            <img id="icon" src="http://localhost:8080/img/icon">
-            <div class="list-button" id="list-button-home">
-                <img class="list-button-img" id="list-button-img-home" src="">
+            <img id="icon" src="http://localhost:8080/resource/images/icon.svg">
+            <div class="list-button" id="list-button-home" onmouseover="listHover('home');" onmouseout="listUnhover('home');" onclick="listSelect('home');">
+                <img class="list-button-img" id="list-button-img-home" src="http://localhost:8080/resource/images/home_unselected.svg">
                 <p class="list-button-p" id="list-button-p-home">Home</p>
             </div>
-            <div class="list-button" id="list-button-search">
-                <img class="list-button-img" id="list-button-img-search" src="">
+            <div class="list-button" id="list-button-search" onmouseover="listHover('search');" onmouseout="listUnhover('search');" onclick="listSelect('search');">
+                <img class="list-button-img" id="list-button-img-search" src="http://localhost:8080/resource/images/search_unselected.svg">
                 <p class="list-button-p" id="list-button-p-search">Search</p>
             </div>
-            <div class="list-button" id="list-button-playlist">
-                <img class="list-button-img" id="list button-img-playlist" src="">
-                <p class="list-button-p" id="list-button-p-playlist">Playlists
-                    
-                </p>
+            <div class="list-button" id="list-button-playlist" onmouseover="listHover('playlist');" onmouseout="listUnhover('playlist');" onclick="listSelect('playlist');">
+                <img class="list-button-img" id="list-button-img-playlist" src="http://localhost:8080/resource/images/playlist_unselected.svg">
+                <p class="list-button-p" id="list-button-p-playlist">Playlists</p>
             </div>
         </div>
         <div id="content">
@@ -32,5 +30,5 @@
         </div>
     </div>
 </body>
-<script src="http://localhost:8080/js/main"></script>
+<script src="http://localhost:8080/resource/main/script.js"></script>
 </html>

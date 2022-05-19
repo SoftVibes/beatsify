@@ -1,23 +1,39 @@
-//Constants
-let time = new Date().toLocaleString().slice(0, 2);
-let timeStr = parseInt(time);
+let listSelected = null;
 
+function listHover(item) {
+    img = document.getElementById('list-button-img-' + item);
+    img.src = `http://localhost:8080/resource/images/${item}_selected.svg`;
 
-//Functions and shit
+    button = document.getElementById('list-button-' + item);
+    button.style.backgroundColor = 'rgb(255, 255, 255)';
+    button.style.color = 'rgb(0, 0, 0)';
+}
 
-function setContentGradient() {
-    var content = document.getElementById('content');
-    if (time > 6 && time < 12) {
-        content.style.backgroundImage = 'linear-gradient(rgb(255, 255, 77), rgb(20, 20, 20), rgb(20, 20, 20), rgb(20, 20, 20))'
-    } else if (time > 12 && time < 17) {
-        content.style.backgroundImage = 'linear-gradient(rgb(255, 153, 204), rgb(20, 20, 20), rgb(20, 20, 20), rgb(20, 20, 20))'
-    } else if (time > 17 && time < 5) {
-        content.style.backgroundImage = 'linear-gradient(rgb(102, 140, 255), rgb(20, 20, 20), rgb(20, 20, 20), rgb(20, 20, 20))'
-    } else {
-        console.log('There\'s something seriously wrong with the system time.');
+function listUnhover(item) {
+    if(item != listSelected) {
+        img = document.getElementById('list-button-img-' + item);
+        img.src = `http://localhost:8080/resource/images/${item}_unselected.svg`;
+        
+        button = document.getElementById('list-button-' + item);
+        button.style.backgroundColor = 'rgb(0, 0, 0)';
+        button.style.color = 'rgb(255, 255, 255)';
     }
 }
 
+function listSelect(item) {
+    if (listSelected != null) {
+        img = document.getElementById('list-button-img-' + listSelected);
+        img.src = `http://localhost:8080/resource/images/${listSelected}_unselected.svg`;
 
-//Code to run
-//setContentGradient();
+        button1 = document.getElementById('list-button-' + listSelected);
+        button1.style.backgroundColor = 'rgb(0, 0, 0)';
+        button1.style.color = 'rgb(255, 255, 255)';
+    }
+    listSelected = item;
+    button2 = document.getElementById('list-button-' + item);
+    button2.style.backgroundColor = 'rgb(255, 255, 255)';
+    button2.style.color = 'rgb(0, 0, 0)';
+}
+
+listHover('home');
+listSelect('home');
