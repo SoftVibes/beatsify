@@ -1,5 +1,6 @@
 //Variables
 let listSelected = null;
+var playState = 'pause';
 
 //Functions
 function listHover(item) {
@@ -37,17 +38,46 @@ function listSelect(item) {
     button2.style.color = 'rgb(0, 0, 0)';
 }
 
+function playButtonHover(mode) {
+    if (mode == 'on') {
+        img = document.getElementById('img-button-track-play-pause');
+        img.style.width = '4.5vh';
+        img.style.height = '4.5vh';
+    } else if (mode == 'off') {
+        img = document.getElementById('img-button-track-play-pause');
+        img.style.width = '4vh';
+        img.style.height = '4vh';
+    }
+}
+
 function loadTrack() {
     var getData = new XMLHttpRequest();
     getData.onreadystatechange = function () {
-        
+        data = JSON.parse(this.responseText);
+        mins = Math.floor(data.length / 60);
+        secs = data.length % 60;
+        document.getElementById('track-img').src = data.img;
+        document.getElementById('track-name').innerHTML = data.name;
+        document.getElementById('track-artist').innerHTML = data.artist;
+        document.getElementById('track-time').innerHTML = `${mins}:${secs}`;
     }
 
     getData.open('GET', 'http://localhost:8080/track');
     getData.send();
 }
 
+function clickPlayPause() {
+    img = document.getElementById('img-button-track-play-pause');
+    if (playState == 'pause') {
+        img.src = 'http://localhost:8080/resource/images/pause.svg';
+        playState = 'play'
+    } else if (playState == 'play') {
+        img.src = 'http://localhost:8080/resource/images/play.svg';
+        playState = 'pause'
+    }
+}
+
 //Startup
 listHover('home');
 listSelect('home');
-loadTrack();
+//loadTrack();

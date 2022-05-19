@@ -1,8 +1,8 @@
 {
-    "name": "",
-    "artist": "",
-    "length": "",
-    "img": "",
+    "name": "Unknown",
+    "artist": "Unknown",
+    "length": "60",
+    "img": "http://localhost:8080/resource/images/none.svg",
     "song-data": "",
     "artist-data": ""
 }

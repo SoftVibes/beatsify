@@ -26,19 +26,25 @@
 
         </div>
         <div id="track">
-            <img id="track-img" src="">
-            <p id="track-name"></p>
-            <button id="button-track-previous">
-                <img id="img-button-track-previous" src="http://localhost:8080/resource/images/previous.svg">
-            </button>
-            <button id="button-track-play-pause">
-                <img id="img-button-track-play-pause" src="http://localhost:8080/resource/images/play.svg">
-            </button>
-            <button id="button-track-next">
-                <img id="img-button-track-next" src="http://localhost:8080/resource/images/next.svg">
-            </button>
-            <p id="track-artist"></p>
-            <input id="track-control" type="range" min="0" max="100">
+            <img id="track-img" src="http://localhost:8080/resource/images/none.svg">
+            <div id="track-data">
+                <p id="track-name">Unknown</p>
+                <p id="track-artist">Unknown</p>
+            </div>
+            <div id="track-panel">
+                <p id="current-time">0:00</p>
+                <button id="button-track-previous">
+                    <img id="img-button-track-previous" src="http://localhost:8080/resource/images/previous.svg">
+                </button>
+                <button id="button-track-play-pause" onmouseover="playButtonHover('on');" onmouseout="playButtonHover('off');" onclick="clickPlayPause();">
+                    <img id="img-button-track-play-pause" src="http://localhost:8080/resource/images/play.svg">
+                </button>
+                <button id="button-track-next">
+                    <img id="img-button-track-next" src="http://localhost:8080/resource/images/next.svg">
+                </button>
+                <p id="track-time">1:00</p>
+                <input id="track-control" type="range" min="0" max="100">
+            </div>
             <input id="track-volume" type="range" min="0" max="100">
         </div>
     </div>
