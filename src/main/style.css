@@ -209,3 +209,12 @@ body {
     margin-left: 20vw;
     background-color: rgb(20, 20, 20);
 }
+
+#greeting {
+    font-family: monospace;
+    font-size: 250%;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-left: 3%;
+    margin-top: 3%;
+}

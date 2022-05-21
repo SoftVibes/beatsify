@@ -3,6 +3,23 @@ let listSelected = null;
 var playState = 'pause';
 
 //Functions
+function loadGreeting() {
+    time = new Date().getHours();
+    greeting = '';
+    
+    if (time <= 12) {
+        greeting = 'Morning!'
+    } else if (time <= 18) {
+        greeting = 'Afternoon!'
+    } else if (time <= 21) {
+        greeting = 'Evening!'
+    } else {
+        greeting = 'Night!'
+    }
+
+    document.getElementById('greeting').innerHTML += greeting;
+}
+
 function listHover(item) {
     img = document.getElementById('list-button-img-' + item);
     img.src = `http://localhost:8080/resource/images/${item}_selected.svg`;
@@ -112,6 +129,7 @@ function updateVolume(value) {
 }
 
 //Startup
+loadGreeting();
 listHover('home');
 listSelect('home');
 loadTrack();
